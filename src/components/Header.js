@@ -37,7 +37,6 @@ function Header() {
         <li><a href="#">Trade-In</a></li>
         <li><a href="#">Cybertruck</a></li>
         <li><a href="#">Roadster</a></li>
-        <li><a href="#">Solar Roof & Panels</a></li>
         <li><a href="#">Insurance</a></li>
         <li><a href="#">Support</a></li>
         <li><a href="#">Power & Utilities</a></li>
