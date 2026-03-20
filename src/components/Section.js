@@ -23,12 +23,12 @@ function Section({ id, title, description, backgroundImg, leftBtnText, rightBtnT
                                 {leftBtnText}
                             </LeftButton>
                         ) : (
-                            <LeftButton>
+                            <LeftButton as={Link} to="/configurator">
                                 {leftBtnText}
                             </LeftButton>
                         )}
                         {rightBtnText && (
-                            <RightButton>
+                            <RightButton as={Link} to="/experience">
                                 {rightBtnText}
                             </RightButton>
                         )}

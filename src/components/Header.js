@@ -60,29 +60,29 @@ function Header() {
           ))}
         </Menu>
         <RightMenu>
-        <NavLink as={Link} to="/experience" $darkMode={darkMode}>Experience</NavLink>
-        <NavLink as={Link} to="/configurator" $darkMode={darkMode}>Configure</NavLink>
-        <ThemeToggle onClick={() => dispatch(toggleDarkMode())} $darkMode={darkMode}>
-          {darkMode ? <LightModeIcon fontSize="small" /> : <DarkModeIcon fontSize="small" />}
-        </ThemeToggle>
-        <CustomMenu onClick={() => setBurgerStatus(true)} $darkMode={darkMode} />
-      </RightMenu>
-    </Container>
+          <NavLink as={Link} to="/experience" $darkMode={darkMode}>Experience</NavLink>
+          <NavLink as={Link} to="/configurator" $darkMode={darkMode}>Configure</NavLink>
+          <ThemeToggle onClick={() => dispatch(toggleDarkMode())} $darkMode={darkMode}>
+            {darkMode ? <LightModeIcon fontSize="small" /> : <DarkModeIcon fontSize="small" />}
+          </ThemeToggle>
+          <CustomMenu onClick={() => setBurgerStatus(true)} $darkMode={darkMode} />
+        </RightMenu>
+      </Container>
 
-    {burgerStatus && <Overlay onClick={() => setBurgerStatus(false)} />}
-    <BurgerNav show={burgerStatus}>
-      <CloseWrapper>
-        <CustomClose onClick={() => setBurgerStatus(false)} />
-      </CloseWrapper>
-      {cars && cars.map((car, index) => (
-        <li key={index}><a href="#" onClick={(e) => handleCarClick(car, e)}>{car}</a></li>
-      ))}
-      <li><Link to="/experience" onClick={() => setBurgerStatus(false)}>Experience</Link></li>
-      <li><Link to="/configurator" onClick={() => setBurgerStatus(false)}>Configure</Link></li>
-      <li><a href="#">Existing Inventory</a></li>
-      <li><a href="#">Used Inventory</a></li>
-      <li><a href="#">Trade-In</a></li>
-      <li><a href="#">Cybertruck</a></li>
+      {burgerStatus && <Overlay onClick={() => setBurgerStatus(false)} />}
+      <BurgerNav show={burgerStatus}>
+        <CloseWrapper>
+          <CustomClose onClick={() => setBurgerStatus(false)} />
+        </CloseWrapper>
+        {cars && cars.map((car, index) => (
+          <li key={index}><a href="#" onClick={(e) => handleCarClick(car, e)}>{car}</a></li>
+        ))}
+        <li><Link to="/experience" onClick={() => setBurgerStatus(false)}>Experience</Link></li>
+        <li><Link to="/configurator" onClick={() => setBurgerStatus(false)}>Configure</Link></li>
+        <li><a href="#">Existing Inventory</a></li>
+        <li><a href="#">Used Inventory</a></li>
+        <li><a href="#">Trade-In</a></li>
+        <li><a href="#">Cybertruck</a></li>
         <li><a href="#">Roadster</a></li>
         <li><a href="#">Insurance</a></li>
         <li><a href="#">Support</a></li>
