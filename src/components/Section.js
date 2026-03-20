@@ -1,12 +1,13 @@
 import React from 'react'
 import Styled, { keyframes } from 'styled-components'
 import { Fade } from 'react-awesome-reveal'
+import { Link } from 'react-router-dom'
 
-function Section({ title, description, backgroundImg, leftBtnText, rightBtnText, accentColor, darkBg }) {
+function Section({ id, title, description, backgroundImg, leftBtnText, rightBtnText, accentColor, darkBg, modelSlug }) {
     return (
-        <Wrap bgImage={backgroundImg}>
+        <Wrap id={id} bgImage={backgroundImg}>
             <ContentBlock>
-                <Fade bottom>
+                <Fade direction="up" triggerOnce>
                     <TitleRow>
                         <Accent $barColor={accentColor} />
                         <div>
@@ -15,11 +16,17 @@ function Section({ title, description, backgroundImg, leftBtnText, rightBtnText,
                         </div>
                     </TitleRow>
                 </Fade>
-                <Fade bottom>
+                <Fade direction="up" delay={150} triggerOnce>
                     <ButtonGroup>
-                        <LeftButton>
-                            {leftBtnText}
-                        </LeftButton>
+                        {modelSlug ? (
+                            <LeftButton as={Link} to={`/model/${modelSlug}`}>
+                                {leftBtnText}
+                            </LeftButton>
+                        ) : (
+                            <LeftButton>
+                                {leftBtnText}
+                            </LeftButton>
+                        )}
                         {rightBtnText && (
                             <RightButton>
                                 {rightBtnText}
@@ -53,6 +60,7 @@ const Wrap = Styled.div`
     background-repeat: no-repeat;
     overflow: hidden;
     background-image: ${props => `url("/images/${props.bgImage}")`};
+    scroll-margin-top: 60px;
 `
 
 const ContentBlock = Styled.div`
@@ -134,8 +142,9 @@ const LeftButton = Styled.div`
     cursor: pointer;
     transition: all 0.3s ease;
     background: rgba(16, 21, 24, 0.9);
-    color: #ffffff;
+    color: #ffffff !important;
     border: none;
+    text-decoration: none !important;
 
     &:hover {
         background: rgba(16, 21, 24, 1);
@@ -150,7 +159,7 @@ const LeftButton = Styled.div`
 
 const RightButton = Styled(LeftButton)`
     background: rgba(255, 255, 255, 0.7);
-    color: #171a20;
+    color: #171a20 !important;
     border: 1px solid rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8px);
 
