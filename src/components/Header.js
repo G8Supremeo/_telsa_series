@@ -37,16 +37,11 @@ function Header() {
         <li><a href="#">Trade-In</a></li>
         <li><a href="#">Cybertruck</a></li>
         <li><a href="#">Roadster</a></li>
-        <li><a href="#">Solar Roof</a></li>
-        <li><a href="#">Solar Panels</a></li>
-        <li><a href="#">Energy</a></li>
+        <li><a href="#">Solar Roof & Panels</a></li>
         <li><a href="#">Insurance</a></li>
         <li><a href="#">Support</a></li>
-        <li><a href="#">Charging</a></li>
-        <li><a href="#">Power</a></li>
-        <li><a href="#">Utilities</a></li>
+        <li><a href="#">Power & Utilities</a></li>
         <li><a href="#">Test Drive</a></li>
-        <li><a href="#">Find Us</a></li>
         <li><a href="#">More</a></li>
       </BurgerNav>
 
