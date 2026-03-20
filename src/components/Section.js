@@ -1,27 +1,32 @@
 import React from 'react'
 import Styled, { keyframes } from 'styled-components'
+import { Fade } from 'react-awesome-reveal'
 
 function Section({ title, description, backgroundImg, leftBtnText, rightBtnText, accentColor, darkBg }) {
     return (
         <Wrap bgImage={backgroundImg}>
             <ContentBlock>
-                <TitleRow>
-                    <Accent $barColor={accentColor} />
-                    <div>
-                        <h1><strong>{title}</strong></h1>
-                        <p><strong>{description}</strong></p>
-                    </div>
-                </TitleRow>
-                <ButtonGroup>
-                    <LeftButton>
-                        {leftBtnText}
-                    </LeftButton>
-                    {rightBtnText && (
-                        <RightButton>
-                            {rightBtnText}
-                        </RightButton>
-                    )}
-                </ButtonGroup>
+                <Fade bottom>
+                    <TitleRow>
+                        <Accent $barColor={accentColor} />
+                        <div>
+                            <h1><strong>{title}</strong></h1>
+                            <p><strong>{description}</strong></p>
+                        </div>
+                    </TitleRow>
+                </Fade>
+                <Fade bottom>
+                    <ButtonGroup>
+                        <LeftButton>
+                            {leftBtnText}
+                        </LeftButton>
+                        {rightBtnText && (
+                            <RightButton>
+                                {rightBtnText}
+                            </RightButton>
+                        )}
+                    </ButtonGroup>
+                </Fade>
             </ContentBlock>
             <DownArrow src='/images/down-arrow.svg' darkBg={darkBg} />
         </Wrap>
