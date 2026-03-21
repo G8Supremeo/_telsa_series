@@ -11,6 +11,7 @@ import CarDetail from './components/CarDetail';
 import Configurator from './components/Configurator';
 import InteriorShowcase from './components/InteriorShowcase';
 import SplashScreen from './components/SplashScreen';
+import Checkout from './components/Checkout';
 
 const lightTheme = {
   headerBg: 'transparent',
@@ -49,6 +50,7 @@ function App() {
             <Route path="/model/:modelId" element={<><CarDetail /><Footer /></>} />
             <Route path="/configurator" element={<><Configurator /><Footer /></>} />
             <Route path="/experience" element={<><InteriorShowcase /><Footer /></>} />
+            <Route path="/checkout" element={<><Checkout /><Footer /></>} />
           </Routes>
         </div>
       </Router>

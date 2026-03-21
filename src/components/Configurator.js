@@ -172,7 +172,9 @@ function Configurator() {
                 <span>Total</span>
                 <span>${totalPrice.toLocaleString()}</span>
               </TotalRow>
-              <OrderButton>Order Now</OrderButton>
+              <OrderButton as={Link} to="/checkout" state={{ selectedCar, selectedColor, selectedWheel, selectedInterior, totalPrice }}>
+                Order Now
+              </OrderButton>
             </SummaryCard>
           </Fade>
         </OptionsPanel>
@@ -463,7 +465,7 @@ const OrderButton = Styled.button`
   margin-top: 24px;
   height: 48px;
   background: linear-gradient(135deg, #e82127, #ff4f54);
-  color: #fff;
+  color: #fff !important;
   border: none;
   border-radius: 8px;
   font-size: 14px;
@@ -472,6 +474,10 @@ const OrderButton = Styled.button`
   letter-spacing: 2px;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
 
   &:hover {
     transform: translateY(-2px);
