@@ -32,11 +32,8 @@ It's all in the details. Here's what makes this clone special:
 ---
 
 ## 📸 Sneak Peek
-
-*(Hey there! Drop a cool screen-recording GIF of your app here to really show off those sweet animations! Name it `demo.gif` and place it in the root folder).*
-
 <div align="center">
-  <img src="demo.gif" alt="App Animation Demo" width="800" style="border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+  <img src="demo_telsa.gif" alt="App Animation Demo" width="800" style="border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
 </div>
 
 ---
