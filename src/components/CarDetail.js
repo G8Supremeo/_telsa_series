@@ -164,11 +164,6 @@ function CarDetail() {
 export default CarDetail
 
 /* --- Animations --- */
-const fadeSlideUp = keyframes`
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-`
-
 const bounce = keyframes`
   0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
   40% { transform: translateY(6px) translateX(-50%); }

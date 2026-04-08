@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Styled, { keyframes } from 'styled-components'
+import Styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Fade } from 'react-awesome-reveal'
 
