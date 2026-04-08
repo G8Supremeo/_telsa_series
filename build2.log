@@ -1,0 +1,26 @@
+﻿
+> telsa-clone@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  135.99 kB  build\static\js\main.ec8b2637.js
+  284 B      build\static\css\main.337d2f3f.css
+  165 B      build\static\js\488.27fb088f.chunk.js
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
